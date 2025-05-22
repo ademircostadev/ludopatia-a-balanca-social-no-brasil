@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-G">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ludopatia no Brasil</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="style.css"> <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="antialiased">
+
+    <header class="bg-white shadow-md sticky top-0 z-50">
+        <nav class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <div class="flex items-center">
+                    <span class="font-bold text-xl text-teal-700">Vícios: A balança social no Brasil</span>
+                </div>
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-4">
+                        <a href="#inicio" class="nav-link">Início</a>
+                        <a href="#ludopatia" class="nav-link">O que é Ludopatia?</a>
+                        <a href="#riscos" class="nav-link">Riscos e Impactos</a>
+                        <a href="#jogo-consciente" class="nav-link">Jogo Consciente</a>
+                        <a href="#ajuda" class="nav-link">Onde Buscar Ajuda</a>
+                        <a href="#importante" class="nav-link">Você importa</a>
+                    </div>
+                </div>
+                <div class="md:hidden">
+                    <button id="mobile-menu-button" class="text-gray-700 hover:text-teal-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-teal-500">
+                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </nav>
+        <div id="mobile-menu" class="md:hidden hidden bg-white shadow-lg">
+            <a href="#inicio" class="block nav-link px-4 py-3">Início</a>
+            <a href="#ludopatia" class="block nav-link px-4 py-3">O que é Ludopatia?</a>
+            <a href="#riscos" class="block nav-link px-4 py-3">Riscos e Impactos</a>
+            <a href="#jogo-consciente" class="block nav-link px-4 py-3">Jogo Consciente</a>
+            <a href="#ajuda" class="block nav-link px-4 py-3">Onde Buscar Ajuda</a>
+            <a href="#importante" class="block nav-link px-4 py-3">Você importa</a>
+        </div>
+    </header>
+
+    <main class="container mx-auto px-4 sm:px-6 lg:px-8 py-8">
+
+        <section id="inicio" class="py-12 text-center">
+            <h1 class="text-4xl font-bold text-teal-700 mb-4">Apostas Online: Entretenimento ou Armadilha?</h1>
+            <p class="text-lg text-gray-600 mb-6 max-w-3xl mx-auto">
+                As apostas online ou bets, cresceram exponencialmente no Brasil, trazendo consigo promessas de diversão e ganhos, mas também sérios riscos de dependência e problemas financeiros e sociais. Este espaço visa informar sobre a ludopatia (vício em jogos), seus perigos e como buscar um jogo mais consciente e ajuda especializada.
+            </p>
+            <img src="https://bing.com/th/id/BCO.8a94bd66-168e-466a-a645-e3c4e2fd71cc.png" alt="Banner ilustrativo sobre apostas online" width="640" height="640" class="mx-auto rounded-lg shadow-lg mb-8" onerror="this.src='https://veja.abril.com.br/wp-content/uploads/2024/08/arte-Bets-digital-2907.jpg?quality=90&strip=info'">
+            <p class="text-md text-gray-500">Navegue pelas seções para entender melhor este universo e proteger sua saúde financeira e mental.</p>
+        </section>
+
+        <section id="ludopatia" class="py-12 bg-gray-50 rounded-xl shadow-inner">
+            <div class="max-w-4xl mx-auto">
+                <h2 class="section-title">O que é Ludopatia? 🎲</h2>
+                <p class="text-lg text-gray-700 mb-8 text-center">
+                    A ludopatia, ou vício em jogos de azar, é um transtorno mental sério caracterizado por um impulso incontrolável de continuar apostando, apesar das consequências negativas. Não é falta de vontade, mas uma condição que afeta o cérebro de forma similar a outras dependências.
+                </p>
+
+                <div class="grid md:grid-cols-2 gap-8 mb-10">
+                    <div class="card">
+                        <h3 class="text-2xl font-semibold text-teal-600 mb-3">Como Afeta o Cérebro 🧠</h3>
+                        <p class="text-gray-700">
+                            Cada aposta, especialmente as vitoriosas, libera dopamina, o "hormônio do prazer". Isso cria um ciclo de recompensa que o cérebro busca repetir. Plataformas de apostas são desenhadas para explorar isso, com gratificações rápidas e a ilusão de controle, tornando difícil parar.
+                        </p>
+                    </div>
+                    <div class="card">
+                        <h3 class="text-2xl font-semibold text-teal-600 mb-3">Reconhecimento Oficial</h3>
+                        <p class="text-gray-700">
+                            A Organização Mundial da Saúde (OMS) reconhece a ludopatia como um transtorno. Ela se manifesta pela necessidade crescente de apostar mais e pela incapacidade de controlar esse impulso, levando a prejuízos significativos.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="card mt-10">
+                    <h3 class="text-2xl font-semibold text-teal-600 mb-4 text-center">Sinais de Alerta: Você se Identifica? 🚩</h3>
+                    <p class="text-gray-700 mb-6 text-center">Marque os comportamentos que você reconhece em si mesmo ou em alguém próximo. A identificação precoce é crucial.</p>
+                    <div id="sinaisAlertaContainer" class="space-y-3">
+                    </div>
+                    <p id="sinaisAlertaFeedback" class="mt-4 text-center text-teal-700 font-semibold"></p>
+                    <p class="text-sm text-gray-500 mt-2 text-center">Este checklist é apenas para conscientização. Se você se identifica com múltiplos sinais, procure orientação profissional.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="riscos" class="py-12">
+            <h2 class="section-title">Riscos e Impactos do Vício 📉</h2>
+            <p class="text-lg text-gray-700 mb-10 text-center max-w-3xl mx-auto">
+                O vício em apostas pode desencadear um efeito dominó, afetando finanças, saúde mental e física, relações sociais e até mesmo levando a problemas legais. É crucial entender a profundidade desses riscos.
+            </p>
+
+            <div class="space-y-8">
+                <div class="card expandable">
+                    <h3 class="expandable-title">Impactos Financeiros 💸 <span class="arrow-icon text-xl">▼</span></h3>
+                    <div class="expandable-content">
+                        <p>Dívidas crescentes, perda de economias e bens, e até falência são comuns. A busca por recuperar perdas agrava o endividamento. No Brasil, preocupa o fato de que R$1 de cada R$5 recebidos do Bolsa Família por alguns beneficiários foi usado em apostas (agosto/2024), uma grave drenagem de recursos de quem mais precisa.</p>
+                        <div class="chart-container mt-6">
+                            <canvas id="bolsaFamiliaChart"></canvas>
+                        </div>
+                        <p class="text-sm text-gray-500 mt-2 text-center">Gráfico ilustrativo: Uso de Renda do Bolsa Família.</p>
+                    </div>
+                </div>
+
+                <div class="card expandable">
+                    <h3 class="expandable-title">Saúde Mental e Física 😟 <span class="arrow-icon text-xl">▼</span></h3>
+                    <div class="expandable-content">
+                        <p>Ansiedade, depressão, estresse crônico e irritabilidade são frequentes. O vício muitas vezes coexiste com outros transtornos (humor, TDAH, abuso de substâncias). O risco de suicídio é alarmantemente alto entre jogadores patológicos (12-24% já tentaram). Problemas físicos como distúrbios do sono, cardiovasculares e gástricos também podem surgir devido ao estresse e negligência.</p>
+                    </div>
+                </div>
+
+                <div class="card expandable">
+                    <h3 class="expandable-title">Impactos Sociais e Familiares 👨‍👩‍👧‍👦 <span class="arrow-icon text-xl">▼</span></h3>
+                    <div class="expandable-content">
+                        <p>Mentiras e omissões sobre o jogo corroem a confiança e geram conflitos familiares, podendo levar ao isolamento e divórcio. O desempenho no trabalho e nos estudos cai, com risco de perda de emprego e oportunidades. A publicidade agressiva e o uso de influenciadores normalizam o risco, atingindo jovens e vulneráveis, sobrecarregando o sistema de saúde pública.</p>
+                    </div>
+                </div>
+                
+                <div class="card expandable">
+                    <h3 class="expandable-title">Implicações Legais ⚖️ <span class="arrow-icon text-xl">▼</span></h3>
+                    <div class="expandable-content">
+                        <p>Para sustentar o vício, alguns podem recorrer a atos ilícitos como fraudes, furtos ou falsificações, resultando em problemas com a justiça. Além disso, plataformas de apostas podem ser usadas para lavagem de dinheiro e manipulação de resultados, afetando a integridade dos esportes.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-10 text-center">
+                 <h3 class="text-2xl font-semibold text-teal-600 mb-4">Prevalência da Ludopatia no Brasil</h3>
+                 <p class="text-gray-700 mb-6">Estudos recentes indicam um número preocupante de brasileiros afetados:</p>
+                 <div class="chart-container">
+                     <canvas id="prevalenciaChart"></canvas>
+                 </div>
+                 <p class="text-sm text-gray-500 mt-2 text-center">Fonte: Estimativas baseadas em pesquisas da Unifesp e USP (dados do relatório).</p>
+            </div>
+        </section>
+
+        <section id="jogo-consciente" class="py-12 bg-teal-50 rounded-xl shadow-inner">
+            <div class="max-w-4xl mx-auto">
+                <h2 class="section-title">Praticando o Jogo Consciente ✅</h2>
+                <p class="text-lg text-gray-700 mb-10 text-center">
+                    Jogar de forma consciente significa encarar as apostas como entretenimento, não como fonte de renda, e adotar estratégias para manter o controle.
+                </p>
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <div class="card bg-white">
+                        <h4 class="font-semibold text-teal-700 text-lg mb-2">Defina um Orçamento 💰</h4>
+                        <p class="text-sm text-gray-600">Aposte apenas o que pode perder, sem comprometer despesas essenciais.</p>
+                    </div>
+                    <div class="card bg-white">
+                        <h4 class="font-semibold text-teal-700 text-lg mb-2">Estabeleça Limites de Tempo ⏱️</h4>
+                        <p class="text-sm text-gray-600">Monitore o tempo gasto e faça pausas regulares.</p>
+                    </div>
+                    <div class="card bg-white">
+                        <h4 class="font-semibold text-teal-700 text-lg mb-2">Não Tente Recuperar Perdas 🚫</h4>
+                        <p class="text-sm text-gray-600">Aceite perdas como custo do entretenimento. Não aumente apostas para compensar.</p>
+                    </div>
+                    <div class="card bg-white">
+                        <h4 class="font-semibold text-teal-700 text-lg mb-2">Jogue por Diversão 🎉</h4>
+                        <p class="text-sm text-gray-600">Não veja como investimento ou forma de ganhar dinheiro fácil.</p>
+                    </div>
+                    <div class="card bg-white">
+                        <h4 class="font-semibold text-teal-700 text-lg mb-2">Evite Jogar como Fuga 💨</h4>
+                        <p class="text-sm text-gray-600">Não use apostas para lidar com estresse, ansiedade ou problemas.</p>
+                    </div>
+                    <div class="card bg-white">
+                        <h4 class="font-semibold text-teal-700 text-lg mb-2">Aposte Sóbrio 🧠</h4>
+                        <p class="text-sm text-gray-600">Não jogue sob influência de álcool ou drogas.</p>
+                    </div>
+                     <div class="card bg-white">
+                        <h4 class="font-semibold text-teal-700 text-lg mb-2">Busque Outros Hobbies ⚽🎨</h4>
+                        <p class="text-sm text-gray-600">Equilibre sua vida com outras atividades de lazer.</p>
+                    </div>
+                     <div class="card bg-white">
+                        <h4 class="font-semibold text-teal-700 text-lg mb-2">Use Ferramentas de Autocontrole 🛠️</h4>
+                        <p class="text-sm text-gray-600">Plataformas devem oferecer autoexclusão, limites de depósito, etc.</p>
+                    </div>
+                     <div class="card bg-white">
+                        <h4 class="font-semibold text-teal-700 text-lg mb-2">Sites Regulamentados (.bet.br) 🇧🇷</h4>
+                        <p class="text-sm text-gray-600">Prefira sites legalizados para maior segurança e fiscalização.</p>
+                    </div>
+                </div>
+                <p class="text-center mt-8 text-gray-600">Lembre-se: a responsabilidade é compartilhada. Governos e empresas de apostas também têm um papel crucial na proteção do jogador.</p>
+            </div>
+        </section>
+
+        <section id="ajuda" class="py-12">
+            <h2 class="section-title">Onde Buscar Ajuda? ❤️</h2>
+            <p class="text-lg text-gray-700 mb-10 text-center max-w-3xl mx-auto">
+                Reconhecer o problema é o primeiro passo. A ludopatia é tratável e existem diversos recursos de apoio. Não hesite em procurar ajuda profissional e compartilhar com pessoas de confiança.
+            </p>
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="card">
+                    <h3 class="text-2xl font-semibold text-teal-600 mb-3">Tratamento Profissional</h3>
+                    <ul class="list-disc list-inside text-gray-700 space-y-2">
+                        <li><strong>Psicoterapia:</strong> Ajuda a identificar gatilhos e mudar padrões de pensamento.</li>
+                        <li><strong>Psiquiatria:</strong> Para tratar o vício e condições coexistentes (depressão, ansiedade). Medicamentos podem ajudar.</li>
+                        <li><strong>Clínicas de Reabilitação:</strong> Para casos graves, com abordagem multidisciplinar.</li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <h3 class="text-2xl font-semibold text-teal-600 mb-3">Grupos de Apoio e Recursos Públicos</h3>
+                     <ul class="list-disc list-inside text-gray-700 space-y-2">
+                        <li>
+                            <strong>Jogadores Anônimos (JA):</strong> Apoio mútuo baseado nos 12 passos.
+                            <a href="http://www.jogadoresanonimos.com.br" target="_blank" class="help-resource-link block">www.jogadoresanonimos.com.br</a>
+                            WhatsApp SP: (11) 99571-6942
+                        </li>
+                        <li>
+                            <strong>SUS / CAPS:</strong> Centros de Atenção Psicossocial oferecem tratamento gratuito. Procure o mais próximo.
+                        </li>
+                        <li>
+                            <strong>Alô CAIXA (Jogo Responsável):</strong> 4004 0104 (capitais) / 0800 104 0104 (demais regiões) - Opção 7, depois 2.
+                        </li>
+                    </ul>
+                    <p class="text-sm text-gray-500 mt-3">Consulte o relatório completo para mais contatos e informações detalhadas sobre os programas.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="importante" class="py-12 bg-gray-100 rounded-xl shadow-inner">
+            <div class="max-w-3xl mx-auto text-center">
+                <h2 class="section-title">Um Chamado à Prevenção e à Esperança 🙏</h2>
+                <p class="text-lg text-gray-700 mb-6">
+                    O vício em apostas é um desafio sério, mas a recuperação é possível. A prevenção, através da educação e regulamentação eficaz, é fundamental. É preciso um esforço conjunto de governos, empresas, sociedade e famílias para criar um ambiente de jogo mais seguro e oferecer apoio real a quem precisa.
+                </p>
+                <p class="text-gray-700">
+                    Se você ou alguém que conhece está lutando contra o vício, lembre-se: você não está sozinho. Busque ajuda, informe-se e acredite na mudança.
+                </p>
+                <button onclick="window.scrollTo({top: 0, behavior: 'smooth'})" class="button-primary mt-8">
+                    Voltar ao Topo ▲
+                </button>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="bg-gray-800 text-white py-8 text-center">
+        <p>Projeto de extensão sobre ludopatia. </p>
+        <p>&copy; <span id="currentYear"></span> Desenvolvido por Ademir de Oliveira Costa.</p>
+        <p class="text-sm text-gray-400">Este material tem fins educativos e não substitui aconselhamento profissional.</p>
+    </footer>
+
+    <script>
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                mobileMenu.classList.add('hidden'); 
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    targetElement.scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                }
+                
+                document.querySelectorAll('.nav-link').forEach(link => link.classList.remove('active'));
+                if (!this.classList.contains('block')) { 
+                    this.classList.add('active');
+                }
+            });
+        });
+        
+        const sections = document.querySelectorAll('section');
+        const navLinks = document.querySelectorAll('header nav a.nav-link');
+
+        window.onscroll = () => {
+            let current = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                if (pageYOffset >= sectionTop - 70) { 
+                    current = section.getAttribute('id');
+                }
+            });
+
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href').substring(1) === current) {
+                    link.classList.add('active');
+                }
+            });
+        };
+
+
+        const sinaisDeAlerta = [
+            "Preocupação constante com o jogo.", 
+            "Necessidade de apostar quantias crescentes para sentir a mesma emoção.",
+            "Dificuldade em controlar, reduzir ou parar de apostar.",
+            "Inquietação ou irritabilidade ao tentar parar de jogar.",
+            "Usar o jogo como forma de escapar de problemas ou aliviar sentimentos negativos.",
+            "Tentar recuperar o dinheiro perdido apostando mais.",
+            "Mentir para familiares/amigos sobre o envolvimento com o jogo.",
+            "Negligenciar responsabilidades importantes devido ao jogo.",
+            "Depender financeiramente de outros por perdas em apostas.",
+            "Sentir culpa ou remorso após jogar."
+        ];
+
+        const sinaisContainer = document.getElementById('sinaisAlertaContainer');
+        sinaisDeAlerta.forEach((sinal, index) => {
+            const label = document.createElement('label');
+            label.className = 'checklist-item';
+            label.innerHTML = `
+                <input type="checkbox" id="sinal-${index}" name="sinaisAlerta" value="${sinal}">
+                <span>${sinal}</span>
+            `;
+            sinaisContainer.appendChild(label);
+        });
+
+        const checkboxes = document.querySelectorAll('input[name="sinaisAlerta"]');
+        const feedbackElement = document.getElementById('sinaisAlertaFeedback');
+        checkboxes.forEach(checkbox => {
+            checkbox.addEventListener('change', () => {
+                const checkedCount = document.querySelectorAll('input[name="sinaisAlerta"]:checked').length;
+                if (checkedCount > 0 && checkedCount <= 3) {
+                    feedbackElement.textContent = `Você marcou ${checkedCount} sinal(is). Fique atento ao seu comportamento.`;
+                } else if (checkedCount > 3 && checkedCount <=6) {
+                    feedbackElement.textContent = `Você marcou ${checkedCount} sinais. É importante refletir sobre seus hábitos de jogo.`;
+                } else if (checkedCount > 6) {
+                    feedbackElement.textContent = `Você marcou ${checkedCount} sinais. Considere seriamente buscar apoio profissional.`;
+                } else {
+                    feedbackElement.textContent = '';
+                }
+            });
+        });
+
+        const bolsaFamiliaCtx = document.getElementById('bolsaFamiliaChart')?.getContext('2d');
+        if (bolsaFamiliaCtx) {
+            new Chart(bolsaFamiliaCtx, {
+                type: 'doughnut',
+                data: {
+                    labels: ['Usado em Apostas (Estimativa)', 'Outros Usos'],
+                    datasets: [{
+                        label: 'Uso de Renda do Bolsa Família',
+                        data: [20, 80], 
+                        backgroundColor: ['#ef4444', '#34d399'],
+                        borderColor: ['#f87171', '#6ee7b7'],
+                        borderWidth: 1
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        title: {
+                            display: true,
+                            text: 'Estimativa: 20% de auxílios para apostas (Agosto/2024)',
+                            font: { size: 14 }
+                        },
+                        tooltip: {
+                            callbacks: {
+                                label: function(context) {
+                                    return context.label + ': ' + context.raw + '%';
+                                }
+                            }
+                        }
+                    }
+                }
+            });
+        }
+
+        const prevalenciaCtx = document.getElementById('prevalenciaChart')?.getContext('2d');
+        if (prevalenciaCtx) {
+            new Chart(prevalenciaCtx, {
+                type: 'bar',
+                data: {
+                    labels: ['Uso Perigoso (Unifesp)', 'Transtorno de Jogo (Unifesp)', 'Viciados (USP)'],
+                    datasets: [{
+                        label: 'Número de Pessoas (em milhões)',
+                        data: [10.9, 1.4, 2.0], 
+                        backgroundColor: ['#fbbf24', '#f97316', '#ef4444'],
+                        borderColor: ['#fcd34d', '#fb923c', '#f87171'],
+                        borderWidth: 1
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    scales: {
+                        y: {
+                            beginAtZero: true,
+                            title: {
+                                display: true,
+                                text: 'Pessoas (em milhões)'
+                            }
+                        }
+                    },
+                    plugins: {
+                        title: {
+                            display: true,
+                            text: 'Estimativas de Prevalência da Ludopatia no Brasil',
+                            font: { size: 14 }
+                        },
+                        tooltip: {
+                            callbacks: {
+                                label: function(context) {
+                                    return context.dataset.label + ': ' + context.raw + ' milhões';
+                                }
+                            }
+                        }
+                    }
+                }
+            });
+        }
+
+        
+        document.querySelectorAll('.expandable-title').forEach(title => {
+            title.addEventListener('click', () => {
+                const expandableDiv = title.closest('.expandable');
+                expandableDiv.classList.toggle('expanded');
+            });
+        });
+
+    </script>
+</body>
+</html>
